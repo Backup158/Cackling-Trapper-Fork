@@ -7,6 +7,8 @@
 --]]
 
 local mod = get_mod("CacklingTrapper")
+mod.version = "1.1.0_owo" -- to distinguish it from the original Seph version
+mod:info(mod.version.." loaded uwu nya :3")
 
 local function replace_footsteps(breed_file_path, wwise_event_path)
     mod:hook_require(breed_file_path, function(sound_data)
