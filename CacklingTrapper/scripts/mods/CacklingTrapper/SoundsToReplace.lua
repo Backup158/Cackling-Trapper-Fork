@@ -22,4 +22,13 @@ mod.table_of_replacements = {
         ["breed_file_path"] =   "scripts/settings/breed/breeds/chaos/chaos_ogryn_executor_sounds",
         ["wwise_event_path"] =  "wwise/events/minions/play_enemy_chaos_ogryn_armoured_executor_a__special_attack_vce", -- voiceline
     },
+    -- Flamer laugh
+    ["renegade_flamer"] = {
+        ["breed_file_path"] =   "scripts/settings/breed/breeds/renegade/renegade_flamer_sounds",
+        ["wwise_event_path"] =  "wwise/events/minions/play_enemy_traitor_guard_flamer_hurt_vce",
+    },
+    ["cultist_flamer"] = {
+        ["breed_file_path"] =   "scripts/settings/breed/breeds/cultist/cultist_flamer_sounds",
+        ["wwise_event_path"] =  "wwise/events/minions/play_enemy_cultist_flamer_hurt_vce",
+    },
 }
