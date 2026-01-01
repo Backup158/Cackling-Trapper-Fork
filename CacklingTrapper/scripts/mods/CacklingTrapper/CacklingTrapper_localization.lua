@@ -33,7 +33,7 @@ end
 -- Localization
 -- ##############
 for breed_name, _ in pairs(mod.table_of_replacements) do
-	localizations[breed_name] = final_string
+	localizations[breed_name] = lazy_localize(breed_name)
 end
 
 return localizations
