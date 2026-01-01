@@ -16,6 +16,6 @@ local function replace_footsteps(breed_file_path, wwise_event_path)
     end)
 end
 
-for informal_enemy_name, replacement_data_table in pairs(mod.table_of_replacements) do
+for breed_name, replacement_data_table in pairs(mod.table_of_replacements) do
     replace_footsteps(replacement_data_table.breed_file_path, replacement_data_table.wwise_event_path)
 end
