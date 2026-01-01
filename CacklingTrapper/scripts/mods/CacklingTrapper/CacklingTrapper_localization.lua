@@ -17,11 +17,13 @@ local localizations = {
 -- Helper Functions
 -- ##############
 local function lazy_localize(breed_name)
-	local final_string = Localize(breed_name)
+	local final_string = Localize("loc_breed_display_name_"..breed_name)
 	-- If it's not a string already in the game, modify the key name
 	if not final_string then
-		-- Capitalize every word
-		final_string, _ = string_regex_sub(breed_name, "_%a", string_upper)
+		-- Capitalize first letter
+		final_string, _ = string_regex_sub(breed_name, "^%l", string_upper)
+		-- Capitalize every word after
+		final_string, _ = string_regex_sub(final_string, "_%a", string_upper)
 		-- Convert underscore to space
 		final_string, _ = string_regex_sub(final_string, "_", " ")
 	end
