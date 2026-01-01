@@ -33,11 +33,7 @@ end
 -- Localization
 -- ##############
 for breed_name, _ in pairs(mod.table_of_replacements) do
-	
-	-- Also localizes the entry
-	-- I'm sorry, Dijkstra
 	localizations[breed_name] = final_string
 end
-
 
 return localizations
