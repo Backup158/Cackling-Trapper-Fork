@@ -15,5 +15,7 @@ local function replace_footsteps(breed_file_path, wwise_event_path)
 end
 
 for breed_name, replacement_data_table in pairs(mod.table_of_replacements) do
-    replace_footsteps(replacement_data_table.breed_file_path, replacement_data_table.wwise_event_path)
+    if mod:get(breed_name) then
+        replace_footsteps(replacement_data_table.breed_file_path, replacement_data_table.wwise_event_path)
+    end
 end
