@@ -8,8 +8,6 @@
 
 local mod = get_mod("CacklingTrapper")
 
-mod:io_dofile("CacklingTrapper/scripts/mods/CacklingTrapper/SoundsToReplace")
-
 local function replace_footsteps(breed_file_path, wwise_event_path)
     mod:hook_require(breed_file_path, function(sound_data)
         sound_data.events.footstep = wwise_event_path
