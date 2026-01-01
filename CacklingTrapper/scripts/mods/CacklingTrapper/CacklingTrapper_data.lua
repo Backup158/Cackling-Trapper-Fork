@@ -9,7 +9,7 @@ local function add_widget(location, name)
     location[#location + 1] = {
         setting_id = name,
         type = "checkbox",
-        default_value = false,
+        default_value = true,
     }
 end
 for breed_name, _ in pairs(mod.table_of_replacements) do
