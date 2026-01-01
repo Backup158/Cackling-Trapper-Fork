@@ -8,7 +8,14 @@
 
 local mod = get_mod("CacklingTrapper")
 
+mod:io_dofile("CacklingTrapper/scripts/mods/CacklingTrapper/SoundsToReplace")
 
-mod:hook_require("scripts/settings/breed/breeds/renegade/renegade_netgunner_sounds", function(sound_data)
-    sound_data.events.footstep = "wwise/events/minions/play_traitor_guard_netgunner_laugh_vce"
-end)
+local function replace_footsteps(breed_file_path, wwise_event_path)
+    mod:hook_require(breed_file_path, function(sound_data)
+        sound_data.events.footstep = wwise_event_path
+    end)
+end
+
+for informal_enemy_name, replacement_data_table in pairs(mod.table_of_replacements) do
+    replace_footsteps(replacement_data_table.breed_file_path, replacement_data_table.wwise_event_path)
+end
