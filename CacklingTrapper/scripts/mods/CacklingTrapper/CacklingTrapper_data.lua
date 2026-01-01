@@ -14,12 +14,6 @@ local function add_widget(location, name)
 end
 for breed_name, _ in pairs(mod.table_of_replacements) do
 	add_widget(final_widgets, breed_name)
-
-	-- Also localizes the entry
-	-- I'm sorry, Dijkstra
-	mod:add_global_localize_strings({
-		["loc_"..breed_name] = Localize(breed_name)
-	})
 end
 
 return {
