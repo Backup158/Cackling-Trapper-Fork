@@ -7,7 +7,8 @@ mod.table_of_replacements = {
     },
     ["renegade_executor"] = {
         ["breed_file_path"] =   "scripts/settings/breed/breeds/renegade/renegade_executor_sounds",
-        ["wwise_event_path"] =  "wwise/events/minions/play_enemy_traitor_executor__special_attack_vce",
+        ["wwise_event_path"] =  "wwise/events/minions/play_enemy_traitor_executor__special_attack_vce", -- voiceline
+        --["wwise_event_path"] =  "wwise/events/minions/play_shared_elite_executor_cleave_warning", -- the VRRRR of the chainaxe
     },
     ["chaos_hound"] = {
         ["breed_file_path"] =   "scripts/settings/breed/breeds/chaos/chaos_hound_sounds",
