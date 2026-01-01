@@ -6,6 +6,8 @@ mod:io_dofile("CacklingTrapper/scripts/mods/CacklingTrapper/SoundsToReplace")
 -- ##############
 local string = string
 local string_regex_sub = string.gsub
+local string_upper = string.upper
+local string_sub = string.sub
 
 local localizations = {
 	mod_description = {
@@ -18,8 +20,12 @@ local localizations = {
 -- ##############
 local function lazy_localize(breed_name)
 	local final_string = Localize("loc_breed_display_name_"..breed_name)
+
 	-- If it's not a string already in the game, modify the key name
-	if not final_string then
+	--	Localize returns a formatted string if it fails
+	--  this always begins with the <
+	local string_is_unlocalized = string_sub(final_string, 1, 1) == "<"
+	if string_is_unlocalized then
 		-- Capitalize first letter
 		final_string, _ = string_regex_sub(breed_name, "^%l", string_upper)
 		-- Capitalize every word after
